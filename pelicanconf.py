@@ -22,4 +22,6 @@ ARTICLE_SAVE_AS = "posts/{date:%Y}/{date:%m}/{slug}/index.html"
 
 STATIC_PATHS = ["images"]
 
+THEME = 'notmyidea'
+
 # FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)

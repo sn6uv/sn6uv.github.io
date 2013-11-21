@@ -19,7 +19,7 @@ You can install pelican with pip:
 
 .. code-block:: bash
 
-    pip install pelican
+    $ pip install pelican
 
 The code is on github_ if you're curious.
 
@@ -44,7 +44,7 @@ We can do this manually, but pelican includes this useful tool
 It will then ask you a series of questions, like where you want the website
 to be created:
 
-.. code-block:: bash
+:: 
 
     Welcome to pelican-quickstart v3.3.0.
     
@@ -156,8 +156,9 @@ rebuild the site
 Hooray!
 
 Obviously this is only a very short introduction to pelican.
-The `getting started`_ pelican documentation is excellent tells you how to add
-other pages, include images, link to internal content and much more.
+The `getting started`_ pelican documentation is excellent.
+It tells you how to add other pages, include images,
+link to internal content and much more.
 
 .. _pelican: http://docs.getpelican.com/
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
