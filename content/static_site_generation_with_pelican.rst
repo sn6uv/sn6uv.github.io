@@ -78,7 +78,7 @@ Lets test our new blog!
 
 and point your browser at http://localhost:8000/.
 
-.. image:: images/myblog.png
+.. image:: /images/myblog.png
    :width: 100 %
    :alt: myblog.png
 
@@ -149,7 +149,7 @@ rebuild the site
 
     $ fab build
 
-.. image:: images/firstpost.png
+.. image:: /images/firstpost.png
    :width: 100 %
    :alt: firstpost.png
 

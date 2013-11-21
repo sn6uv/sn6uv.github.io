@@ -15,10 +15,6 @@ def clean():
     if os.path.isdir(DEPLOY_PATH):
         local('rm -rf {deploy_path}'.format(**env))
         local('mkdir {deploy_path}'.format(**env))
-    if os.path.exists('pelicanconf.pyc'):
-        local('rm pelicanconf.pyc')
-    if os.path.exists('publishconf.pyc'):
-        local('rm publishconf.pyc')
 
 def build():
     local('pelican -s pelicanconf.py')
@@ -39,11 +35,11 @@ def reserve():
     serve()
 
 def preview():
-    local('pelican -s publishconf.py')
+    local('pelican -s pelicanconf.py')
 
 @hosts(production)
 def publish():
-    local('pelican -s publishconf.py')
+    local('pelican -s pelicanconf.py')
     project.rsync_project(
         remote_dir=dest_path,
         local_dir=DEPLOY_PATH.rstrip('/') + '/',
