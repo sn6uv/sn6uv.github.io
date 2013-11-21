@@ -32,6 +32,7 @@ def regenerate():
 
 def serve():
     local('cd {deploy_path} && python2 -m SimpleHTTPServer'.format(**env))
+    # local('cd {deploy_path} && python -m http.server'.format(**env))
 
 def reserve():
     build()
