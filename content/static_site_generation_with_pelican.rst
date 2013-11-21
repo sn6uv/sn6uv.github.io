@@ -155,6 +155,11 @@ rebuild the site
 
 Hooray!
 
+Obviously this is only a very short introduction to pelican.
+The `getting started`_ pelican documentation is excellent tells you how to add
+other pages, include images, link to internal content and much more.
+
 .. _pelican: http://docs.getpelican.com/
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html
 .. _github: https://github.com/getpelican/pelican/
+.. _getting started: http://docs.getpelican.com/en/3.3.0/getting_started.html
