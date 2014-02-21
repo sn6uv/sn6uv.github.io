@@ -24,4 +24,6 @@ STATIC_PATHS = ["images"]
 
 THEME = 'notmyidea'
 
+PLUGINS = ["latex"]
+
 # FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
