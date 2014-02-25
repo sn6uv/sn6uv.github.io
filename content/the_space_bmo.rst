@@ -1,4 +1,4 @@
-$H^1$ and $BMO$
+The space $BMO$
 ###############
 :date: 2014-02-21 11:31
 :category: math
@@ -27,8 +27,3 @@ In fact, $BMO$ is a Banach space that contains $L^\\infty$.
 
 Our definition for $BMO$ used cubes, but the definition using balls instead is equivalent.
 **Question:** What other shapes could we use? How about $L^p$ balls for $1 \\le p \\le \\infty$?
-
-Introducing $H^1$
------------------
-The space $BMO$ is often a replacement for $L^\\infty$.
-Similarly, the Hardy space $H^1$ is a useful stand in for $L^1$.
