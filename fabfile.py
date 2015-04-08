@@ -7,8 +7,8 @@ env.deploy_path = 'output'
 DEPLOY_PATH = env.deploy_path
 
 # Remote server configuration
-production = 'angus@sn6uv.com:22'
-dest_path = '/var/www/vhosts/sn6uv.com/htdocs'
+production = 'angus@angusgriffith.com'
+dest_path = '/var/www/'
 
 
 def clean():
