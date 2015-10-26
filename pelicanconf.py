@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*- #
 
 AUTHOR = 'Angus Griffith'
-SITENAME = 'sn6uv.com'
-SITEURL = 'http://sn6uv.com'
+SITENAME = 'blog.angusgriffith.com'
+SITEURL = 'http://blog.angusgriffith.com'
 
 TIMEZONE = 'Australia/Sydney'
 DEFAULT_LANG = u'en'
