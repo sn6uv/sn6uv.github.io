@@ -40,7 +40,7 @@ _MATHJAX_SCRIPT="""
         var s = document.createElement('script');
         s.id = 'mathjaxscript_pelican';
         s.type = 'text/javascript'; 
-        s.src = 'https:' == document.location.protocol ? 'https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+        s.src = 'https:' == document.location.protocol ? 'https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML' : 'http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
         s[(window.opera ? "innerHTML" : "text")] =
             "MathJax.Hub.Config({{" +
             "    config: ['MMLorHTML.js']," +
