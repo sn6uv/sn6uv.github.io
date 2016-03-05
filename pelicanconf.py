@@ -3,7 +3,7 @@
 
 AUTHOR = 'Angus Griffith'
 SITENAME = 'blog.angusgriffith.com'
-SITEURL = 'http://blog.angusgriffith.com'
+SITEURL = 'https://blog.angusgriffith.com'
 
 TIMEZONE = 'Australia/Sydney'
 DEFAULT_LANG = u'en'
