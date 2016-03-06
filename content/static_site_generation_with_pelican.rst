@@ -1,12 +1,11 @@
-Static site generation with pelican.
-####################################
+Static site generation with pelican
+###################################
 :date: 2013-11-21 16:24
 :category: programming
 :author: Angus Griffith
 
 Introduction
 ------------
-
 I'd like to start by talking about pelican_, a neat python based static site
 generator.
 Pelican allows you to generate static content (HTML and CSS) from reStructuredText_ (RST) files.
@@ -14,7 +13,6 @@ Pelican allows you to generate static content (HTML and CSS) from reStructuredTe
 
 Installing Pelican
 ------------------
-
 You can install pelican with pip:
 
 .. code-block:: bash
@@ -25,7 +23,6 @@ The code is on github_ if you're curious.
 
 Creating a blog
 ---------------
-
 Let's begin by creating a new directory
 
 .. code-block:: bash

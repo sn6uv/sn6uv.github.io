@@ -84,7 +84,7 @@ def binary_search(match_tuple, ignore_within):
     # Find first value in array where predicate is False
     # predicate function: tupleList[mid][0] < t[index]
     while lo < hi:
-        mid = lo + (hi-lo+1)/2
+        mid = lo + int((hi-lo+1)/2)
         if ignore_within[mid][0] < match_tuple[0]:
             lo = mid
         else:
