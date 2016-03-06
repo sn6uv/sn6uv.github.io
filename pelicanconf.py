@@ -22,7 +22,7 @@ ARTICLE_SAVE_AS = "posts/{date:%Y}/{date:%m}/{slug}/index.html"
 
 STATIC_PATHS = ["images"]
 
-THEME = 'notmyidea'
+THEME = 'mytheme'
 
 PLUGINS = ["latex"]
 
