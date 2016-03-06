@@ -26,4 +26,6 @@ THEME = 'notmyidea'
 
 PLUGINS = ["latex"]
 
+GOOGLE_ANALYTICS = 'UA-64441388-1'
+
 # FILES_TO_COPY = (('extra/robots.txt', 'robots.txt'),)
