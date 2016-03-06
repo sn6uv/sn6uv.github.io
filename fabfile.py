@@ -45,3 +45,6 @@ def publish():
         local_dir=DEPLOY_PATH.rstrip('/') + '/',
         delete=True
     )
+
+def symlinktheme():
+    local('sudo pelican-themes -s mytheme')
