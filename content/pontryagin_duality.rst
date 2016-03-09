@@ -6,7 +6,7 @@ Pontryagin duality
 
 Topological groups
 ------------------
-A topological groups is what one might expect, a group $G$ equipped with a topology.
+A topological group is what one might expect from the name, a group $G$ equipped with a topology.
 We ask that the topology is nice with respect to the group structure.
 Namely, we require that the binary operation on the group $G \\times G \\to G$, and the inverse $G \\to G$ are continuous.
 
