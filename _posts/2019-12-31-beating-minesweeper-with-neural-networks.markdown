@@ -97,9 +97,10 @@ The first move is always safe in minesweeper so the AI chooses at random to
 remove bias in the data derived from player initialisation.
 
 The player accumulates data on previous games. This will be used for training
-the model.
+the model. In order to beat minesweeper we will attempt to implement the
+`predict_mines` function using a neural network.
 
-# Model representation
+# View representation
 
 Each tile in the game grid can be either guessed or unguessed. If it's guessed
 there is either a bomb or a number of adjacent bombs $0, \\dots, 8$. In total,
