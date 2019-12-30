@@ -1,47 +1,37 @@
-Static site generation with pelican
-###################################
-:date: 2013-11-21 16:24
-:category: programming
-:author: Angus Griffith
-
-Introduction
-------------
-I'd like to start by talking about pelican_, a neat python based static site
-generator.
-Pelican allows you to generate static content (HTML and CSS) from reStructuredText_ (RST) files.
+# Introduction
+I'd like to start by talking about [pelican](http://docs.getpelican.com/), a
+neat python based static site generator.
+Pelican allows you to generate static content (HTML and CSS) from
+[reStructuredText](http://docutils.sourceforge.net/rst.html) (RST) files.
 
 
-Installing Pelican
-------------------
+# Installing Pelican
 You can install pelican with pip:
 
-.. code-block:: bash
+{% highlight bash %}
+pip install pelican
+{% endhighlight %}
 
-    $ pip install pelican
+The code is on [github](https://github.com/getpelican/pelican/) if you're curious.
 
-The code is on github_ if you're curious.
-
-Creating a blog
----------------
+# Creating a blog
 Let's begin by creating a new directory
 
-.. code-block:: bash
-
-    $ mkdir blog
-    $ cd blog/
+{% highlight bash %}
+mkdir blog
+cd blog/
+{% endhighlight %}
 
 From here we need to add some config files so pelican knows how to generate
 the site.
 We can do this manually, but pelican includes this useful tool
 
-.. code-block:: bash
-
-    $ pelican-quickstart
+{% highlight bash %}
+pelican-quickstart
+{% endhighlight %}
 
 It will then ask you a series of questions, like where you want the website
 to be created:
-
-:: 
 
     Welcome to pelican-quickstart v3.3.0.
     
@@ -68,16 +58,14 @@ to be created:
 
 Lets test our new blog!
 
-.. code-block:: bash
+{% highlight bash %}
+fab build
+fab serve
+{% endhighlight %}
 
-    $ fab build
-    $ fab serve
+and point your browser at `http://localhost:8000/`.
 
-and point your browser at http://localhost:8000/.
-
-.. image:: /images/myblog.png
-   :width: 100 %
-   :alt: myblog.png
+![myblog.png](/assets/myblog.png)
 
 Sucess!
 
@@ -86,24 +74,25 @@ If `python` refers to Python 3 on your system you'll have to edit `fabfile.py`
 and the `Makefile` accordingly.
 E.g. Change
 
-.. code-block:: python
 
-    def serve():
-        local('cd {deploy_path} && python -m SimpleHTTPServer'.format(**env))
+{% highlight python %}
+def serve():
+    local('cd {deploy_path} && python -m SimpleHTTPServer'.format(**env))
+{% endhighlight %}
 
 to either
 
-.. code-block:: python
-
+{% highlight python %}
     def serve():
         local('cd {deploy_path} && python2 -m SimpleHTTPServer'.format(**env))
+{% endhighlight %}
 
 or
     
-.. code-block:: python
-
+{% highlight python %}
     def serve():
         local('cd {deploy_path} && python -m http.server'.format(**env))
+{% endhighlight %}
 
 in `fabfile.py` depending on whether you want to test your blog with a
 Python 2 or Python 3 http server.
@@ -112,13 +101,11 @@ Adding Content
 --------------
 We've got an empty blog working. Let's add some content
 
-.. code-block:: bash
-
-    $ vim content/firstpost.rst
+{% highlight bash %}
+vim content/firstpost.rst
+{% endhighlight %}
 
 and then add:
-
-.. code-block:: rst
 
     Firstpost
     #########
@@ -142,22 +129,17 @@ and then add:
 
 rebuild the site
 
-.. code-block:: bash
 
-    $ fab build
+{% highlight bash %}
+fab build
+{% endhighlight %}
 
-.. image:: /images/firstpost.png
-   :width: 100 %
-   :alt: firstpost.png
+![firstpost.png](/assets/firstpost.png)
 
-Hooray!
+# Hooray!
 
 Obviously this is only a very short introduction to pelican.
-The `getting started`_ pelican documentation is excellent.
+The [getting started](http://docs.getpelican.com/en/3.3.0/getting_started.html)
+ pelican documentation is excellent.
 It tells you how to add other pages, include images,
 link to internal content and much more.
-
-.. _pelican: http://docs.getpelican.com/
-.. _reStructuredText: http://docutils.sourceforge.net/rst.html
-.. _github: https://github.com/getpelican/pelican/
-.. _getting started: http://docs.getpelican.com/en/3.3.0/getting_started.html
