@@ -336,3 +336,13 @@ The goal is to optimise win rate; predicting mine locations is only useful
 towards that goal. A reinforcemnt learning approach, such as Q-learning might
 be more effective at increasing the win-rate, at the tradeoff of slower training
 rate.
+
+# Try it yourself
+
+Requires tensorflow and numpy.
+
+{% highlight python %}
+git clone https://github.com/sn6uv/minesweeper.git
+cd minesweeper
+python learn_from_scratch.py
+{% endhighlight %}
