@@ -1,6 +1,7 @@
-This is a project which I completed earlier this year, after a previous failed 
-attempt trying to win 2048. The play strategy is relatively simple and
-can be followed and replicated by beginners in machine learning.
+This is a project which I completed earlier this year, after a previous attempt
+trying to beat 2048. The play strategy is relatively simple and can be followed
+and replicated by beginners in machine learning. All the code is at
+[https://github.com/sn6uv/minesweeper](https://github.com/sn6uv/minesweeper).
 
 This post demonstrates how to acheive good human performance on minesweeper
  using neural networks to predict mine locations.
@@ -9,8 +10,8 @@ This post demonstrates how to acheive good human performance on minesweeper
 
 # Implementing minesweeper
 
-Minesweeper was implemented in Python with a focus on efficiency. Each game state is 
-represented as an instance of a `Game` object
+Minesweeper was implemented in Python. Each game state is represented as an
+instance of a `Game` object
 
 {% highlight python %}
 class Game:
@@ -124,7 +125,9 @@ for the final layer which used a sigmoid activation.
 
 ![minesweeper_architecture.png](/assets/minesweeper_architecture.png)
 
-The network takes $f$ an input game $x \\in \\{0,1\\}^{10n}$ state and outputs
+This works out to $455n^2 + 46n$ parameters.
+
+The network $f$ takes an input game $x \\in \\{0,1\\}^{10n}$ state and outputs
 $p \\in \\mathbb{R}^n$, the probability distribution of mines.
 
 The loss function used was the cross-entropy loss with $L^2$ regularisation,
@@ -297,12 +300,12 @@ These can be set in
 
 # Results
 
-|height|width|number of mines|win rate|training duration
-|4|4|2|90%|<1min|
-|5|5|3|80%|10min|
-|9|9|10|80%|6 hours|
+|height|width|number of mines|win rate|training duration|parameters|
+|4|4|2|90%|<1min|117216|
+|5|5|3|80%|10min|285525|
+|9|9|10|80%|6 hours|2988981|
 
-The network was trained on dual-core i7-6600U CPU @ 2.60GHz.
+The network was trained on core i7-6600U CPU @ 2.60GHz.
 
 This network was tested on larger networks, but the training rate was too slow
 to get any good results.
@@ -316,3 +319,20 @@ Training this network is quite slow. Unsuprisingly the bottleneck is the game
 simulation in Python. Some attempt was made to optimise this but it could be
 improved significantly by switching to a faster language like C++ or running
 multiple simulaitons in parallel on a more powerful machine.
+
+# Future work
+
+**CNNs**
+
+By flattening the input board to a $10 \\times h \\times w$ vector the network needs to
+learn the spatial relationships between input variables. A convolutional neural
+network (CNN) might generalise better, especially for larger input boards.
+Moreover, a CNN trained on one board size could also play on other boards,
+assuming a simlar mine density. A side-effect would be to reduce the model size.
+
+**Reinforcement learning**
+
+The goal is to optimise win rate; predicting mine locations is only useful
+towards that goal. A reinforcemnt learning approach, such as Q-learning might
+be more effective at increasing the win-rate, at the tradeoff of slower training
+rate.
