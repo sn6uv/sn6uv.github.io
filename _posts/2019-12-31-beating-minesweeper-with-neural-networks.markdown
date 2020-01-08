@@ -303,9 +303,13 @@ These can be set in
 |height|width|number of mines|win rate|training duration|parameters|
 |4|4|2|90%|<1min|117216|
 |5|5|3|80%|10min|285525|
-|9|9|10|80%|6 hours|2988981|
+|9|9|10|80%|3 days|2988981|
 
 The network was trained on core i7-6600U CPU @ 2.60GHz.
+
+![training_progress.png](/assets/training_progress.png)
+
+Training progress for beginner board.
 
 This network was tested on larger networks, but the training rate was too slow
 to get any good results.
